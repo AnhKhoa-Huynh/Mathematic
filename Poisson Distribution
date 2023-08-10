@@ -1,0 +1,28 @@
+# Poisson Distribution
+
+# *INTRODUCTION*
+
+- The Poisson distribution is another common distribution, and it is used to describe the number of times a certain event occurs within a fixed time or space interval.
+- For example, the Poisson distribution can be used to describe the number of cars that pass through a specific intersection between 4pm and 5pm on a given day. It can also be used to describe the number of calls received in an office between 1pm to 3pm on a certain day.
+- The Poisson distribution is defined by the rate parameter, symbolized by the Greek letter lambda, λ.
+- Lambda represents the expected value — or the average value — of the distribution. For example, if our expected number of customers between 1pm and 2pm is 7, then we would set the parameter for the Poisson distribution to be 7.
+
+****Calculating Probabilities of Exact Values Using the Probability Mass Function****
+
+# *CALCULATING PROBABILITIES OF EXACT VALUES USING THE PROBABILITY MASS FUNCTION* poisson.pmf()
+
+- We can use the `poisson.pmf()` method in the `scipy.stats` library to ***evaluate the probability of observing a specific number given the parameter*** (expected value) of a distribution.
+- The number of times it rains in the next 30 days is “Poisson distributed” with lambda = 10.
+- We can calculate the probability of exactly 6 times of rain as follows:
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c2f312df-40ec-4f87-b479-64cfcd518c6a/Untitled.png)
+    
+    Output: 0.06305545800345125
+    
+
+- If we expect it to rain 10 times in the next 30 days, the number of times it rains in the next 30 days is “Poisson distributed” with lambda = 10.
+- We can calculate the probability of 12-14 times of rain as follows:
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c5729562-f8bb-4a39-963e-4ef3bdc9ea74/Untitled.png)
+
+Output: 0.21976538076223123
