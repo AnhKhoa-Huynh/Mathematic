@@ -1,0 +1,51 @@
+- In multiple linear regression, the response variable must be quantitative, while the predictors may be either quantitative, categorical, or a mix of both. For example, we might ask:
+    - How is blood pressure associated with exercise and anxiety level?
+    - What is the relationship between happiness scores and income level, family size, and marital status?
+- For example, this fictional survey data measures students’ math scores (`score`), hours spent studying (`hours_studied`), and whether they ate breakfast on test day (`breakfast`).
+import seaborn as sns
+import matplotlib.pyplot as plt
+ 
+sns.lmplot(x='hours_studied', y='score', hue='breakfast', markers=['o', 'x'], fit_reg=False, data=survey)
+plt.show()
+
+Note that we set fit_reg to False here. The lmplot() function will automatically fit and plot a regression line for us unless we specify otherwise.
+- According to the plot:
+    - More hours of studying seem to be associated with higher test scores.
+    - The group that ate breakfast (`breakfast` = `1`) appears to have a higher average test score than the group that didn’t (`breakfast` = `0`).
+- Performing a multiple linear regression using these variables will allow us to quantify these relationships and understand whether they are likely to persist for new data.
+
+Multiple Regression Model Equation
+- We often write the equation of a line in the form y=mx + b, where m is the slope of the line and b is the y-intercept. Since we will be adding at least two predictors to a multiple regression equation, it is helpful to modify our ordering and notation of this equation:
+- First, we may rewrite this equation by putting the intercept term first and the slope term second.
+y = b + mx
+- Next, instead of using the names b and m, we use the names b0 and b1, respectively. Notice that we’ve also changed our variable name x to x1 because it is our first predictor.
+y = b0 + b1x1
+- We are now able to add as many predictors as we need in the form where y is the response variable, b0 is the intercept, and bi is the coefficient on the ith predictor variable.
+y = b0 + b1x1 + b2x2 + ... + bixi
+- The “slopes” (b1, b2, b3, etc.) on the variables in multiple regression are called partial regression coefficients.
+
+Fitting a Multiple Regression in Python
+import statsmodels.api as sm
+model = sm.OLS.from_formula('score ~ hours_studied + breakfast', data=survey).fit()
+print(model.summary())
+print(model.params)
+# Output:
+# Intercept        32.665570
+# hours_studied     8.540499
+# breakfast        22.495615
+ 
+print(model.params[0])
+# Output:
+# 32.66556979549575
+
+
+
+Binary Categorical Variables in Multiple Regression*
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+ 
+sns.lmplot(x='hours_studied', y='score', hue='breakfast', markers=['o', 'x'], fit_reg=False, data=survey)
+plt.plot(survey.hours_studied, 32.7+8.5*survey.hours_studied, color='blue',linewidth=5)    #it is possible to omit the linewidth -> default is 1.0
+plt.plot(survey.hours_studied, 55.2+8.5*survey.hours_studied, color='orange',linewidth=5)
+plt.show()
