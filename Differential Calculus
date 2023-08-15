@@ -1,0 +1,235 @@
+# Differential Calculus
+
+<aside>
+💡 **CHEATSHEET:** [Differential Calculus: Differential Calculus Cheatsheet | Codecademy](https://www.codecademy.com/learn/learn-differential-calculus/modules/math-ds-differential-calculus/cheatsheet)
+
+</aside>
+
+# *Limits*
+
+- Limits quantify what happens to the values of a function as we approach a given point.
+- This can be defined as: “***the limit as x goes to 6 of f(x) approaches some value L***”.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/61bd7333-501e-4ebc-96d3-7b8b716daa64/Untitled.png)
+
+- We can read this as: “***the limit as x goes to 6 of f(x) approaches some value L***”
+    - To evaluate this limit, we take points increasingly closer and closer to *6*— as close to 6 as we can get, but not 6 itself! We then evaluate where the function is headed at those points.
+- If we look at the limit of a function as x approaches a value from one direction, this is called ***a one-sided limit***.
+- For example, we might look at the values of *f(5)*, *f(5.9)*, *f(5.999)* and see if they are trending towards the value of *f(6)*. This is represented as:
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3450f501-4d46-4455-b72e-b598877e8bdd/Untitled.png)
+
+- We read this as “***the limit as x approaches 6 from the left side approaches some value L***”.
+- Whereas if we looked at the values of *f(6.1)*, *f(6.01)*, *f(6.0005)* and see if they are trending towards *f(6)*, we would represent this as:
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ff8b6a5a-9d71-4c3f-b3cd-f15dc4435c60/Untitled.png)
+    
+- We read this as “***the limit as x goes to 6 from the right side approaches some value L***”.
+
+> The limit as *x* approaches 6 exists only if the limit as *x* approaches 6 from the left side is equal to the limit as *x* approaches 6 from the right side.
+> 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aa1fc676-b08c-4366-a22d-fd87eaf95635/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ebb91a19-e945-4dd5-b946-38409302dca4/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0a324622-d12e-4a48-8f94-da8f7c0433dd/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/deca009c-ecf1-4fdc-817d-9ce6773a72f0/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aa800f06-9a8f-4738-b384-84cc5abf2b04/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/08c11682-1e81-4248-b174-3d314677ff81/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/85e96264-0ffa-4e98-a839-2582b46e983e/Untitled.png)
+
+---
+
+# *Limit Definition of a Derivative*
+
+- Suppose we wanted to measure a runner’s instantaneous speed using a stopwatch. By instantaneous speed, we mean their speed at an exact moment in time.
+- Let’s define *f(t)* as the runner’s distance from the start time at time *t*. How could we find the runner’s instantaneous speed at 1 second after the race? We could record their positions at 1 second and sometime second measurement. Then the second time is *x+h*, and the positions at the two times are *f(x)* and *f(x+h)*.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c341a9a9-e8de-4533-85e4-b0aca7e5c776/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2886226a-6b67-45fa-9949-e1dffe3d285e/Untitled.png)
+
+> This is called the *derivative at a point*, which is the function’s slope (rate of change) at a specific point.
+> 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3672fca1-a5f9-4646-9c7c-3f7579f82de7/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0c7c7acd-4363-4edc-8e92-064b5a156811/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a36d376f-1a70-4586-acce-aa9b8d8c44c9/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bff4a6e2-ea6b-4ba8-ad4b-3c254a7d6bdc/Untitled.png)
+
+---
+
+# *The Derivative Function*
+
+- Derivative functions are often denoted ***f’(x)* (read *f* prime of *x*)** or ***df/dx* (read derivative of *f* at *x*)**.
+- If ***f(x)*** represents ***the function value at a point x***, the corresponding ***derivative function f’(x)*** represents ***how a function is changing at the same point x***.
+
+---
+
+# *Properties of the Derivative Function*
+
+- Let’s say:
+    - If *f(t)* describes a runner’s position as a function of time; Then, the derivative function *f’(t)* describes the runner’s speed at any time *t*.
+    - If *s(t)* that describes the real-time sales of a particular product; the corresponding derivative function *s’(t)* describes how those sales are changing in real-time.
+- If ***f’(x)* > 0**, the corresponding function *f(x)* is increasing. Keep in mind that *f(x)* itself may be negative even though the derivative *f’(x)* is positive. The derivative says nothing about the value of the original function, only about how it is changing. Similarly, if *f’(x)* < 0, then the original function is decreasing.
+- If ***f’(x)* = 0**, then the function is not changing. This can mean one of a few things.
+    - It may mean that the function has reached a ***local maximum* (or maxima)**. A local maximum is a value of x where *f’(x)* changes from positive to negative and thus hits 0 along the way. In *f(x)*, the local maximum is higher than all the points around it.
+    - It may also mean that the function has reached what is called a ***local minimum***. A local minimum is lower than the points around it. When *f’(x)* goes from negative values to 0 to positive values, a local minimum form.
+    - It may be an *inflection point*. This is a point where a function has a change in the direction of curvature. For example, the curve of the function goes from “facing down” to “facing up.” Finding inflection points involves a second derivative test, which we will not get to in this lesson.
+- *Global maxima* and *global minima* are the largest or smallest over the entire range of a function.
+- In machine learning models, maxima and minima are key concepts as they’re usually what we are trying to find when we optimize!
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/22f62ec6-eb17-4528-9c69-60e00714345b/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/293e910a-29bb-405f-b5f1-8bb5ab9b417f/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/50a2335f-5db1-467b-aeb0-652e538f0be2/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f0f196e1-c735-4775-9f0f-eaa3cf5a448c/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2ec80af8-3598-4197-961e-fc46c6c10f4d/Untitled.png)
+
+- What do we know about the value of *f’(x)* in this section of *f(x) in the above 5 images, respectively?*
+    1. *f'(x) > 0* because the slope of the function is positive.
+    2. *f'(x) = 0* because the slope of the function is going from positive to negative and at the global maximum it is equal to zero.
+    3. *f'(x) < 0* because the slope of the function is negative.
+    4. *f'(x) = 0* because the slope of the function is going from negative to positive and at the local minimum it is equal to zero.
+    5. *f'(x) = 0* because the slope of the function is going from positive to negative and at the local maximum it is equal to zero.
+
+---
+
+# *Calculating Derivatives*
+
+- We can think that derivatives are *linear operators*, fancy language that means:
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e6527334-52df-4076-b716-7e9934edb9dd/Untitled.png)
+
+- This means that we can pull constants out when calculating a derivative. For example, say we have the following function:
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/48c7ad86-638b-4e2c-aebe-fe9d4630afd0/Untitled.png)
+    
+- We can define the derivative as the following:
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2fc39466-061f-43f8-8b0f-08620812ca79/Untitled.png)
+    
+
+> Breaking it down further:
+> 
+> - (d/dx)4x^2 means we are taking the derivative of 4x^2 with respect to x.
+> - Applying the **power rule** of derivatives, we multiply the coefficient (4) by the exponent (2) and reduce the exponent by 1, resulting in 8x.
+> - Therefore, (d/dx)4x^2 = 8x.
+- We can also say that:
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/069d6e41-02e7-4067-9dcb-c842f30e28b7/Untitled.png)
+
+> **This means that the derivative of a sum is the sum of the derivatives.**
+> 
+- For example, say we have the following function:
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/829ec60d-2fc7-4bb3-8b2d-7b56c92b9458/Untitled.png)
+    
+- We can define the derivative as the following:
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ecf270fa-a3e4-4fd8-a4f4-818201149f71/Untitled.png)
+    
+
+> **When products get involved, derivatives can get a bit more complicated.**
+> 
+- For example, let’s say we have a function in the following form of two separate “parts”:
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/55cd2598-e6e6-4afb-ae19-090656b6ce51/Untitled.png)
+    
+- We define the *product rule* as:
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ea8c8e5b-79cb-4152-87bd-fe20199936f2/Untitled.png)
+    
+
+<aside>
+💡 Mnemonically, we remember this as “**first times derivative of second plus second times derivative of first”**.
+
+</aside>
+
+- For example:
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b6fbc783-3ffc-4ddf-a22c-002f2fbdaeeb/Untitled.png)
+    
+- We would use the product rule as:
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/30eb0ba3-ff82-489b-9816-6ffea90866d5/Untitled.png)
+    
+
+> **Finally, one last rule to take with us into the next exercise is that the derivative of a constant is equal to 0.**
+> 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bb98cf91-598f-42c4-ba3a-2352b48a2574/Untitled.png)
+
+- This is because for a constant there is never any change in value, so the derivative will always equal zero. For example, we can say:
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/61c1cfc6-b9d8-44c6-a223-02b43b168170/Untitled.png)
+
+---
+
+# *More on Calculating Derivatives*
+
+- There are rules even beyond the power rule. Many common functions have defined derivatives.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/208a0ec3-d55a-4711-9ba3-a5b5cc9516fd/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/afef13b5-a001-4420-8069-17d315e6782b/Untitled.png)
+
+- Practice problem 1:
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/85e0d547-32d4-4f47-99e9-fdbb4f60bf0f/Untitled.png)
+    
+- Practice problem 2:
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a491b089-3ffe-4ca9-bba5-060396e2171a/Untitled.png)
+    
+- Solution:
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1cddd0fb-f578-4568-a2b9-393215e1ae14/Untitled.png)
+    
+- Solution:
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/981f652c-c1fe-4b57-a364-5ea89fcdc09a/Untitled.png)
+    
+
+---
+
+# *Calculating Derivatives in Python*
+
+- For example:
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/047615dd-630f-4bd0-8cb8-482cee761aef/Untitled.png)
+
+```sql
+from math import pow
+# dx is the "step" between each x value
+dx = 0.05 # The value 0.05 is an arbitrary choice in this case, but it determines the density or spacing of the x values in the array.
+def f(x):
+  # to calculate the y values of the function
+  return pow(x, 2) + 3
+# x values
+f_array_x = [x for x in np.arange(0,4,dx)]
+# y values
+f_array_y = [f(x) for x in np.arange(0,4,dx)] # store the corresponding y values by applying the function f(x) to each x value in f_array_x
+```
+
+- The `pow()` function within the `f(x)` function we defined allows us to calculate the values of *x^2*
+- To compute the derivative of `f_array`, we use a NumPy function called `gradient()`.
+
+```sql
+f_array_deriv = np.gradient(f_array_y, dx)
+```
+
+- `gradient()` takes in an array (in this case, a one-dimensional array) as its first argument. We also need to specify the distance between the *x* values, which is `dx`.
+- We want “Change in x” to be as small as possible, so we get an accurate instantaneous rate of change for each point.
+- Another example:
