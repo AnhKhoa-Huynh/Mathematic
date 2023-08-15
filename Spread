@@ -1,0 +1,74 @@
+# Spread
+
+<aside>
+💡 **CHEATSHEET:** [Descriptive Statistics: Spread Cheatsheet | Codecademy](https://www.codecademy.com/learn/paths/fundamental-math-for-data-science/tracks/math-ds-descriptive-statistics/modules/math-ds-spread/cheatsheet)
+
+</aside>
+
+# *Variance*
+
+- Variance is a descriptive statistic that describes how spread out the points in a data set are.
+
+---
+
+# *Variance in Numpy*
+
+```
+import numpy as np
+
+grades = [88, 82, 85, 84, 90]
+mean = np.mean(grades)
+
+#When calculating these variables, square the difference.
+difference_one = (88 - mean)**2
+difference_two = (82 - mean)**2
+difference_three = (85 - mean)**2
+difference_four = (84 - mean)**2
+difference_five = (90 - mean)**2
+
+difference_sum = difference_one + difference_two + difference_three + difference_four + difference_five
+
+variance = difference_sum / 5
+
+print("The sum of the squared differences is " + str(difference_sum))
+print("The variance is " + str(variance))
+```
+
+- Let’s dissect this block of code:
+    - Variance is usually represented by the symbol sigma squared.
+    - We start by taking every point in the dataset — from point number `1` to point number `N` — and finding the difference between that point and the mean.
+    - Next, we square each difference to make all differences positive.
+    - Finally, we average those squared differences by adding them together and dividing by `N`, the total number of points in the dataset.
+- All of this work can be done quickly using Python’s NumPy library.
+
+```sql
+import numpy as np
+ 
+dataset = [3, 5, -2, 49, 10]
+variance = np.var(dataset)
+```
+
+---
+
+# *Standard Deviation*
+
+- Standard deviation is computed by taking the square root of the variance.
+- In Python, you can take the square root of a number using `** 0.5`:
+
+```sql
+num = 25
+num_square_root = num ** 0.5
+```
+
+```sql
+import numpy as np
+ 
+dataset = [4, 8, 15, 16, 23, 42]
+standard_deviation = np.std()
+```
+
+- By finding the number of standard deviations a data point is away from the mean, we can begin to investigate how unusual that datapoint truly is.
+- In fact, we can usually expect:
+    - Around **68%** of your data to fall within one standard deviation of the mean.
+    - **95%** of your data to fall within two standard deviations of the mean.
+    - **99.7%** of your data to fall within three standard deviations of the mean.
