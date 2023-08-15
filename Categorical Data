@@ -1,0 +1,42 @@
+# Categorical Data
+
+<aside>
+💡 **CHEATSHEET:** [Descriptive Statistics: Summary Statistics for Categorical Data Cheatsheet | Codecademy](https://www.codecademy.com/learn/paths/fundamental-math-for-data-science/tracks/math-ds-descriptive-statistics/modules/math-ds-summary-stats-categorical-data/cheatsheet)
+
+</aside>
+
+# *Nominal Categories*
+
+- Because these variables’ categories have no ordering or numeric equivalents, it’s impossible to calculate a mean or median, percentiles, ranges, …
+
+→ It is possible to calculate the **mode** - the most common value in the data set.
+
+- The `.value_counts()` function calculates the count of each value in a column and returns the result as a series.
+- By default, `.value_counts()` orders categories in descending order by frequency, thus the top row in the output will be the mode.
+
+```sql
+counts = df['marital.status'].value_counts()
+print(counts)
+```
+
+- We can also extract the name of the modal category by taking the first value from the series `.value_counts()` returns.
+
+```sql
+modal_cat = counts.index[0]
+print(modal_cat) # Output: Married-civ-spouse
+```
+
+- **Output:**
+    
+    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/242f221b-d6f6-45d7-a370-c59036b2150f/Untitled.png)
+    
+
+---
+
+# *Ordinal Categorical Variables*
+
+```sql
+print(list(df['education'].unique()))
+```
+
+- Ordinal categorical variables have ordered categories. But we can also calculate other summary statistics that are not possible for nominal categorical variables.
